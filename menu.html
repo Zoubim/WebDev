@@ -3,45 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Menu - Aroma Cafe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
-<style>
-    .active{
-        text-decoration: underline;
-        text-decoration-color: yellow;
-    }
-</style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Main">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Local Cafe</a>
-            
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
-            
+                <a class="navbar-brand brand" href="index.html">
+                    <img src="images/coffee-heart-logo.svg" alt="Logo coffee cup" width="40" height="40">
+                    <span>Aroma Cafe</span>
+                </a>
+                <a class="btn btn-primary header-cta order-md-last ms-auto ms-md-3" href="contact.html">Get directions</a>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-md-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="page-header">
+            <div class="container">
+                <h1>Our all day breakfast and coffee menu</h1>
+                <p>Breakfast is served all day</p>
+                <a href="downloads/Aroma Menu.txt" class="btn btn-primary mt-3" download>Download Menu</a>
+            </div>
+        </header>
+
+        <nav class="menu-jump sticky-top" aria-label="Menu section">
+            <div class="container">
+                <ul class="nav gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#coffee">Coffee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#drinks">Cold Drinks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#breakfast">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bakery">Bakery</a></li>
+                </ul>
             </div>
         </nav>
 
+        <div class="container menu-wrap">
+            <div class="row row-cols-1 row-cols-lg-2 g-5">
+                
+                <!-- Coffee Section -->
+                <section class="col menu-section" id="coffee" aria-labelledby="coffee-title">
+                    <h2 id="coffee-title">Speciality coffee</h2>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="menu-name">Espresso</span>
+                            <span class="price">$4.50</span>
+                            <p class="desc">Fresh coffee beans</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Long black</span>
+                            <span class="price">$5.00</span>
+                            <p class="desc">Most-sold item on the menu</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Flat white latte</span>
+                            <span class="price">$6.00</span>
+                            <p class="desc">Skim milk, low fat or full fat</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Hot chocolate</span>
+                            <span class="price">$6.50</span>
+                            <p class="desc">Made with dark chocolate</p>
+                        </div>
+                    </div>
+                    <p class="menu-note">Large +$1.00. Almond or Soy milk +$1</p>
+                </section>
 
-    </header>
+                <!-- Cold Drinks Section -->
+                <section class="col menu-section" id="drinks" aria-labelledby="drinks-title">
+                    <h2 id="drinks-title">Cold Drinks</h2>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="menu-name">Iced latte or long black</span>
+                            <span class="price">$6.50</span>
+                            <p class="desc">Double shot over ice</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Fresh orange juice</span>
+                            <span class="price">$7.00</span>
+                            <p class="desc">Freshly made once ordered</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Berry smoothie</span>
+                            <span class="price">$8.50</span>
+                            <p class="desc">Mixed berries, banana, yoghurt and honey</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Mango magic</span>
+                            <span class="price">$6.50</span>
+                            <p class="desc">Mangos and ice only</p>
+                        </div>
+                    </div>
+                </section>
 
-    <main>
+                <!-- Breakfast Section -->
+                <section class="col menu-section" id="breakfast" aria-labelledby="breakfast-title">
+                    <h2 id="breakfast-title">Breakfast, served all day</h2>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="menu-name">Big brekkie</span>
+                            <span class="price">$25.00</span>
+                            <p class="desc">Eggs your way, bacon, mushrooms, hash browns and sourdough</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Eggs on toast</span>
+                            <span class="price">$13.00</span>
+                            <p class="desc">Poached, fried or scrambled on sourdough</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Banana bread</span>
+                            <span class="price">$8.50</span>
+                            <p class="desc">Toasted with whipped butter and honey</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Vegan brekkie</span>
+                            <span class="price">$19.00</span>
+                            <p class="desc">Kale, roast tomato, avocado and seeds</p>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- Bakery Section -->
+                <section class="col menu-section" id="bakery" aria-labelledby="bakery-title">
+                    <h2 id="bakery-title">Baked every morning</h2>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="menu-name">Butter croissant</span>
+                            <span class="price">$5.50</span>
+                            <p class="desc">Baked fresh every morning</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Almond croissant</span>
+                            <span class="price">$7.00</span>
+                            <p class="desc">Baked fresh every morning</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Orange and almond cake</span>
+                            <span class="price">$7.50</span>
+                            <p class="desc">Baked fresh every morning</p>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-name">Chocolate chip cookie</span>
+                            <span class="price">$4.00</span>
+                            <p class="desc">Young ones favorite!</p>
+                        </div>
+                    </div>
+                </section>
 
-
+            </div>
+        </div>
     </main>
 
-    <footer>
-
-
-
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 footer-brand">
+                    <a class="brand" href="index.html">
+                        <img src="images/coffee-heart-logo.svg" alt="logo coffee image" width="40" height="40">
+                        <span>Aroma Cafe</span>
+                    </a>
+                    <p>Speciality coffee and all-day breakfast in Moorabbin, Melbourne</p>
+                </div>
+                <section class="col-md-6 col-lg-3 footer-hours" aria-labelledby="footer-hours-title">
+                    <h2 id="footer-hours-title">Opening hours</h2>
+                    <dl>
+                        <div>
+                            <dt>Mon - Fri</dt>
+                            <dd>6:30 AM - 3:00 PM</dd>
+                        </div>
+                        <div>
+                            <dt>Sat - Sun</dt>
+                            <dd>7:30 AM - 3:00 PM</dd>
+                        </div>
+                    </dl>
+                </section>
+                <section class="col-md-6 col-lg-3" aria-labelledby="footer-contact-title">
+                    <h2 id="footer-contact-title">Contact</h2>
+                    <p class="footer-links">Call us at 0416-111-111</p>
+                    <p class="footer-links">3 Holmesglen Avenue, Moorabbin VIC</p>
+                </section>
+                <section class="col-md-6 col-lg-2" aria-labelledby="footer-follow-title">
+                    <h2 id="footer-follow-title">Follow us</h2>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
 </body>
 </html>
