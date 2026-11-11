@@ -3,45 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact Us - Aroma Cafe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
-<style>
-    .active{
-        text-decoration: underline;
-        text-decoration-color: yellow;
-    }
-</style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Main">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Local Cafe</a>
-            
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
-            </ul>
-            
+                <a class="navbar-brand brand" href="index.html">
+                    <img src="images/coffee-heart-logo.svg" alt="Logo coffee cup" width="40" height="40">
+                    <span>Aroma Cafe</span>
+                </a>
+                <a class="btn btn-primary header-cta order-md-last ms-auto ms-md-3" href="contact.html">Get directions</a>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-md-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
-
     </header>
 
-    <main>
-
-
-
+    <main id="main">
+        <div class="container contact-wrap">
+            <div class="row g-5">
+                <section class="col-lg-7" aria-labelledby="form-title">
+                    <div class="form-panel">
+                        <h2 id="form-title">Send us a message</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Name</label>
+                                <input class="form-control" id="name" name="name" type="text" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control" id="email" name="email" type="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="phone">Phone</label>
+                                <input class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="topic">What is it about?</label>
+                                <select class="form-select" id="topic" name="topic" required>
+                                    <option value="">Choose a topic</option>
+                                    <option>General</option>
+                                    <option>Booking</option>
+                                    <option>Catering</option>
+                                    <option>Complaint</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" id="consent" name="consent" type="checkbox" value="yes" required>
+                                <label class="form-check-label" for="consent">I agree to receive promotional messages</label>
+                            </div>
+                            <p class="form-text">We only use your details to promote our coffee!</p>
+                            <button class="btn btn-primary" type="submit">Send message</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="col-lg-5 contact-details" aria-labelledby="details-title">
+                    <h2 id="details-title">Visit or call</h2>
+                    <ul class="contact-list">
+                        <li>3 Holmesglen Avenue, Moorabbin VIC</li>
+                        <li>0416-111-111</li>
+                        <li>Customer@AromaCafe.com</li>
+                        <li>Two minutes walk from Moorabbin Station</li>
+                    </ul>
+                    <table class="hours">
+                        <caption>Opening hours</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monday - Friday</th>
+                                <td>6:30 AM - 3:00 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Saturday - Sunday</th>
+                                <td>7:30 AM - 3:00 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Public holidays</th>
+                                <td>8:00 AM - 2:00 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
     </main>
-
-    <footer>
-
-
-
+    <section class="map-section py-5 bg-light" aria-labelledby="map-title">
+        <div class="container">
+            <h2 id="map-title" class="mb-4 text-center">Find Us Here</h2>
+            <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.7165561161314!2d145.04802334089112!3d-37.93705167206253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66d8a7707e59d%3A0x4eaf69b9bc8957d9!2sHolmesglen%20Institute!5e0!3m2!1sen!2sau!4v1794394509142!5m2!1sen!2sau"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfulscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Aroma cafe location map">
+            </iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 footer-brand">
+                    <a class="brand" href="index.html">
+                        <img src="images/coffee-heart-logo.svg" alt="logo coffee image" width="40" height="40">
+                        <span>Aroma Cafe</span>
+                    </a>
+                    <p>Speciality coffee and all-day breakfast in Moorabbin, Melbourne</p>
+                </div>
+                <section class="col-md-6 col-lg-3 footer-hours" aria-labelledby="footer-hours-title">
+                    <h2 id="footer-hours-title">Opening hours</h2>
+                    <dl>
+                        <div>
+                            <dt>Mon - Fri</dt>
+                            <dd>6:30 AM - 3:00 PM</dd>
+                        </div>
+                        <div>
+                            <dt>Sat - Sun</dt>
+                            <dd>7:30 AM - 3:00 PM</dd>
+                        </div>
+                    </dl>
+                </section>
+                <section class="col-md-6 col-lg-3" aria-labelledby="footer-contact-title">
+                    <h2 id="footer-contact-title">Contact</h2>
+                    <p class="footer-links">Call us at 0416-111-111</p>
+                    <p class="footer-links">3 Holmesglen Avenue, Moorabbin VIC</p>
+                </section>
+                <section class="col-md-6 col-lg-2" aria-labelledby="footer-follow-title">
+                    <h2 id="footer-follow-title">Follow us</h2>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
 </body>
 </html>
